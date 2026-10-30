@@ -1,17 +1,17 @@
 """
-Data Preparation & Pipeline Project - Automobile dataset.
+Assignment: Data Preparation & Pipeline Project (AI Engineering Bootcamp)
+Author    : Kanza Az Zahrawani <rexxar280903@gmail.com>
 
-ETL pipeline:
-    Extract   -> load_data()          : read raw CSV from data/raw/
-    Transform -> inspect_data()       : initial inspection (printed to terminal)
-                 clean_data()         : missing values, duplicates, inconsistent text, dtypes
-                 transform_data()     : Min-Max scaling + categorical encoding
-    Load      -> save_data()          : write processed CSV to data/processed/
+ETL pipeline sederhana untuk mengolah automobileEDA_dirty_training.csv
+menjadi processed dataset yang bersih dan siap untuk tahap modeling:
+    Extract   -> load_data()      : baca CSV mentah dari data/raw/
+    Transform -> inspect_data()   : inspeksi awal kualitas data
+                 clean_data()     : handling missing value, duplikat, teks, dtypes
+                 transform_data() : Min-Max scaling & categorical encoding
+    Load      -> save_data()      : simpan output ke data/processed/
 
-Run from the project root:
+Jalankan dari root folder:
     python src/pipeline.py
-
-The raw file is only ever read, never written.
 """
 
 from __future__ import annotations
